@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scrollbar-gutter: stable;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Membuat area konten utama mengisi ruang kosong */
+    display: flex; /* Diperlukan agar child-nya (home-container) bisa di-stretch */
+}
+
+.home-container {
+    background-image: linear-gradient(rgba(29, 38, 113, 0.7), rgba(19, 21, 35, 0.7)), url("../../../images/BG-MAIN.jpg"); /* Gradient overlay dengan gambar background */
+    background-size: cover; /* Gambar menutupi seluruh area */
+    background-position: center; /* Posisi gambar di tengah */
+    background-repeat: no-repeat; /* Gambar tidak diulang */
+    color: white; /* Warna teks putih */
+    width: 100%; /* Memastikan container selebar parent-nya (main) */
+    display: flex; /* Mengatur tata letak flexbox */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    justify-content: flex-start; /* Menggeser blok konten ke kiri */
+}
+
+.home-content {
+    max-width: 600px; /* Lebar maksimum konten */
+    text-align: left; /* Rata kiri untuk teks */
+    padding-left: 10%; /* Memberi jarak dari tepi kiri layar */
+}
+
+.home-content h1 {
+    font-size: 3.2em; /* Ukuran font besar untuk judul */
+    margin-bottom: 20px; /* Jarak bawah dari elemen berikutnya */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* Bayangan teks untuk kontras */
+    line-height: 1.2; /* Tinggi baris untuk keterbacaan */
+}
+
+.home-content p {
+    font-size: 1.1em; /* Ukuran font untuk paragraf */
+    margin-bottom: 40px; /* Jarak bawah dari elemen berikutnya */
+    line-height: 1.6; /* Tinggi baris untuk keterbacaan */
+}
+
+.cta-button {
+    background-color: #ffd700; /* Warna emas dari palet */
+    color: #1e3a8a; /* Warna teks biru tua dari palet */
+    padding: 15px 30px; /* Padding dalam tombol */
+    text-decoration: none; /* Menghapus garis bawah default */
+    font-size: 1.1em; /* Ukuran font tombol */
+    font-weight: bold; /* Ketebalan font bold */
+    border-radius: 50px; /* Membuat sudut melengkung (pill shape) */
+    transition: all 0.3s ease; /* Transisi halus untuk semua properti */
+    border: 2px solid #ffd700; /* Border dengan warna emas */
+    display: inline-block; /* Menampilkan sebagai blok inline */
+}
+
+.cta-button:hover {
+    background-color: #22c55e; /* Warna hijau cerah dari palet saat hover */
+    border-color: #22c55e; /* Mengubah warna border saat hover */
+    color: white; /* Mengubah warna teks menjadi putih */
+    transform: translateY(-3px); /* Efek mengangkat tombol sedikit */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Bayangan saat hover */
+}

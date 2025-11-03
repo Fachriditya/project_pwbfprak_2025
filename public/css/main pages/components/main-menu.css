@@ -1,0 +1,46 @@
+.main-nav {
+    display: flex; /* Mengatur tata letak menggunakan flexbox */
+    justify-content: space-between; /* Menyebar elemen secara merata di sepanjang container */
+    align-items: center; /* Memusatkan elemen secara vertikal */
+    background: #1e3a8a; /* Warna background biru tua */
+    padding: 10px 5%; /* Padding: 10px atas-bawah, 5% kiri-kanan */
+    color: white; /* Warna teks putih */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Bayangan dengan offset 0x 4y, blur 6px, dan transparansi */
+}
+
+.main-nav .logo a {
+    color: #ffffff; /* Warna teks putih */
+    font-size: 1.5em; /* Ukuran font 1.5x dari ukuran normal */
+    font-weight: bold; /* Ketebalan font bold */
+    text-decoration: none; /* Menghapus garis bawah default pada link */
+}
+
+.main-nav .main-links {
+    margin: 0; /* Menghapus margin default browser */
+    padding: 0; /* Menghapus padding default browser */
+    list-style: none; /* Menghilangkan bullet points pada list */
+}
+
+.main-nav .main-links li {
+    display: inline-block; /* Menampilkan item secara inline (sejajar horizontal) */
+}
+
+.main-nav .main-links a {
+    display: block; /* Membuat link menjadi block element */
+    margin: 0 15px; /* Margin 0 atas-bawah, 15px kiri-kanan antar link */
+    text-decoration: none; /* Menghapus garis bawah default */
+    color: #ffffff; /* Warna teks putih */
+    font-weight: bold; /* Ketebalan font bold */
+    padding: 10px 5px; /* Padding 10px atas-bawah, 5px kiri-kanan */
+    transition: color 0.3s ease; /* Transisi warna selama 0.3 detik dengan efek ease */
+}
+
+.main-nav .main-links a:hover {
+    color: #ffd700; /* Mengubah warna teks menjadi emas saat hover */
+}
+
+.main-nav .logo img {
+    height: 50px; /* Mengatur tinggi gambar menjadi 50px */
+    width: auto; /* Lebar menyesuaikan proporsi asli gambar */
+    display: block; /* Menampilkan gambar sebagai block element */
+}

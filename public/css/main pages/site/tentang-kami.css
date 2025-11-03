@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scrollbar-gutter: stable;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Membuat area konten utama mengisi ruang kosong */
+    display: flex; /* Diperlukan agar child-nya (home-container) bisa di-stretch */
+}
+
+.about-container {
+    width: 100%;
+    background-color: #f4f7f6; /* Warna latar belakang abu-abu sangat muda */
+}
+
+.about-header {
+    background-color: #ffffff; /* Warna latar belakang putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 60px 20px; /* Padding 60px atas-bawah, 20px kiri-kanan */
+    border-bottom: 1px solid #e0e0e0; /* Garis bawah abu-abu tipis */
+}
+
+.about-header h1 {
+    color: #1e3a8a; /* Biru tua dari palet */
+    font-size: 2.8em; /* Ukuran font besar untuk judul */
+    margin-bottom: 10px; /* Jarak bawah dari elemen berikutnya */
+}
+
+.about-header p {
+    font-size: 1.2em; /* Ukuran font untuk deskripsi */
+    color: #555; /* Warna abu-abu gelap untuk teks */
+    max-width: 800px; /* Lebar maksimum paragraf */
+    margin: 0 auto; /* Memusatkan paragraf */
+}
+
+.about-content {
+    max-width: 1200px; /* Lebar maksimum konten */
+    margin: 40px auto; /* Margin 40px atas-bawah, auto kiri-kanan untuk pusat */
+    padding: 0 20px; /* Padding 0 atas-bawah, 20px kiri-kanan */
+}
+
+.vision-mission {
+    display: flex; /* Mengatur tata letak flexbox */
+    gap: 30px; /* Jarak antar kartu */
+    margin-bottom: 50px; /* Jarak bawah dari section berikutnya */
+}
+
+.info-card {
+    background-color: #ffffff; /* Warna latar belakang putih */
+    padding: 30px; /* Padding dalam kartu */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Bayangan halus */
+    flex: 1; /* Agar kedua kartu memiliki lebar yang sama */
+}
+
+.info-card h2 {
+    color: #1e3a8a; /* Warna biru tua */
+    border-bottom: 2px solid #ffd700; /* Garis bawah emas dari palet */
+    padding-bottom: 10px; /* Padding bawah untuk garis */
+    margin-bottom: 15px; /* Jarak bawah dari konten */
+    display: inline-block; /* Membuat elemen hanya selebar konten */
+}
+
+.info-card ul {
+    padding-left: 20px; /* Padding kiri untuk list */
+    color: #333; /* Warna abu-abu gelap untuk teks */
+}
+
+.info-card ul li {
+    margin-bottom: 10px; /* Jarak bawah setiap item list */
+    line-height: 1.6; /* Tinggi baris untuk keterbacaan */
+}
+
+.history-section {
+    display: flex; /* Mengatur tata letak flexbox */
+    align-items: center; /* Memusatkan elemen secara vertikal */
+    gap: 40px; /* Jarak antara teks dan video */
+    background-color: #ffffff; /* Warna latar belakang putih */
+    padding: 40px; /* Padding dalam section */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Bayangan halus */
+}
+
+.history-text {
+    flex-basis: 50%; /* Mengambil 50% ruang available */
+    color: #333; /* Warna abu-abu gelap untuk teks */
+}
+
+.history-text h2 {
+    color: #1e3a8a; /* Warna biru tua */
+    margin-bottom: 20px; /* Jarak bawah dari paragraf */
+    font-size: 2em; /* Ukuran font untuk subjudul */
+}
+
+.history-text p {
+    line-height: 1.7; /* Tinggi baris untuk keterbacaan */
+    margin-bottom: 15px; /* Jarak bawah antar paragraf */
+}
+
+.history-video {
+    flex-basis: 50%; /* Mengambil 50% ruang available */
+}
+
+.history-video video {
+    width: 100%; /* Lebar video 100% dari container */
+    height: auto; /* Tinggi menyesuaikan proporsi */
+    border-radius: 8px; /* Sudut melengkung pada video */
+    display: block; /* Menghilangkan spasi aneh di bawah video */
+}

@@ -1,0 +1,126 @@
+.contact-container {
+    width: 100%;
+    background-color: #f4f7f6; /* Warna latar belakang abu-abu sangat muda */
+    padding-bottom: 50px; /* Jarak bawah */
+}
+
+.contact-header {
+    background-color: #ffffff; /* Warna latar belakang putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 60px 20px; /* Padding 60px atas-bawah, 20px kiri-kanan */
+    border-bottom: 1px solid #e0e0e0; /* Garis bawah abu-abu tipis */
+    margin-bottom: 40px; /* Jarak bawah dari konten */
+}
+
+.contact-header h1 {
+    color: #1e3a8a; /* Warna biru tua */
+    font-size: 2.8em; /* Ukuran font besar untuk judul */
+    margin-bottom: 10px; /* Jarak bawah dari deskripsi */
+}
+
+.contact-header p {
+    font-size: 1.2em; /* Ukuran font untuk deskripsi */
+    color: #555; /* Warna abu-abu gelap */
+    max-width: 800px; /* Lebar maksimum paragraf */
+    margin: 0 auto; /* Memusatkan paragraf */
+}
+
+.contact-content {
+    max-width: 1200px; /* Lebar maksimum konten */
+    margin: 0 auto; /* Memusatkan konten */
+    padding: 0 20px; /* Padding 0 atas-bawah, 20px kiri-kanan */
+    display: flex; /* Mengatur tata letak flexbox */
+    gap: 30px; /* Jarak antara kolom kiri dan kanan */
+}
+
+.contact-left-column {
+    flex: 1; /* Mengambil 1 bagian dari ruang yang tersedia */
+}
+
+.contact-right-column {
+    flex: 1.2; /* Mengambil 1.2 bagian (sedikit lebih lebar) */
+}
+
+.contact-info-card, .map-card, .contact-form-card {
+    background-color: #ffffff; /* Warna latar belakang putih */
+    padding: 30px; /* Padding dalam kartu */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Bayangan halus */
+    margin-bottom: 30px; /* Jarak bawah antar kartu */
+}
+
+.contact-info-card h3, .map-card h3, .contact-form-card h3 {
+    color: #1e3a8a; /* Warna biru tua */
+    font-size: 1.8em; /* Ukuran font untuk subjudul */
+    margin-top: 0; /* Menghapus margin atas default */
+    margin-bottom: 20px; /* Jarak bawah dari konten */
+    padding-bottom: 10px; /* Padding bawah untuk garis */
+    border-bottom: 2px solid #ffd700; /* Garis bawah emas */
+}
+
+.info-item {
+    margin-bottom: 15px; /* Jarak bawah antar item info */
+}
+
+.info-item strong {
+    display: block; /* Membuat elemen block */
+    color: #333; /* Warna abu-abu gelap */
+    margin-bottom: 5px; /* Jarak bawah dari nilai */
+}
+
+.info-item p {
+    margin: 0; /* Menghapus margin default */
+    color: #555; /* Warna abu-abu sedang */
+    line-height: 1.6; /* Tinggi baris untuk keterbacaan */
+}
+
+.map-container iframe {
+    border-radius: 6px; /* Sudut melengkung pada peta */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Jarak bawah antar form group */
+}
+
+.form-group label {
+    display: block; /* Membuat label block element */
+    margin-bottom: 8px; /* Jarak bawah dari input */
+    font-weight: bold; /* Teks tebal */
+    color: #444; /* Warna abu-abu gelap */
+}
+
+.form-group input, .form-group textarea {
+    width: 100%; /* Lebar penuh container */
+    padding: 12px; /* Padding dalam input */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 6px; /* Sudut melengkung */
+    font-size: 1em; /* Ukuran font normal */
+    font-family: inherit; /* Menggunakan font family yang sama */
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none; /* Menghapus outline default */
+    border-color: #1e3a8a; /* Mengubah warna border saat focus */
+    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2); /* Efek glow biru */
+}
+
+.cta-button {
+    background-color: #ffd700; /* Warna emas */
+    color: #1e3a8a; /* Warna teks biru tua */
+    padding: 15px 30px; /* Padding dalam tombol */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-size: 1.1em; /* Ukuran font tombol */
+    font-weight: bold; /* Teks tebal */
+    border-radius: 50px; /* Sudut melengkung (pill shape) */
+    transition: all 0.3s ease; /* Transisi halus untuk semua properti */
+    border: none; /* Tombol form tidak perlu border */
+    cursor: pointer; /* Kursor pointer saat hover */
+    display: inline-block; /* Menampilkan sebagai blok inline */
+}
+
+.cta-button:hover {
+    background-color: #22c55e; /* Warna hijau cerah saat hover */
+    color: white; /* Mengubah warna teks menjadi putih */
+    transform: translateY(-3px); /* Efek mengangkat tombol */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Bayangan saat hover */
+}

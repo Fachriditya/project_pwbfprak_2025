@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scrollbar-gutter: stable;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Membuat area konten utama mengisi ruang kosong */
+    display: flex; /* Diperlukan agar child-nya (home-container) bisa di-stretch */
+}
+
+.services-container {
+    width: 100%;
+    background-color: #f4f7f6; /* Warna latar belakang abu-abu sangat muda */
+    padding-bottom: 50px; /* Jarak di bawah */
+}
+
+.services-header {
+    background-color: #ffffff; /* Warna latar belakang putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 60px 20px; /* Padding 60px atas-bawah, 20px kiri-kanan */
+    border-bottom: 1px solid #e0e0e0; /* Garis bawah abu-abu tipis */
+    margin-bottom: 40px; /* Jarak bawah dari konten berikutnya */
+}
+
+.services-header h1 {
+    color: #1e3a8a; /* Biru tua dari palet */
+    font-size: 2.8em; /* Ukuran font besar untuk judul */
+    margin-bottom: 10px; /* Jarak bawah dari deskripsi */
+}
+
+.services-header p {
+    font-size: 1.2em; /* Ukuran font untuk deskripsi */
+    color: #555; /* Warna abu-abu gelap */
+    max-width: 800px; /* Lebar maksimum paragraf */
+    margin: 0 auto; /* Memusatkan paragraf */
+}
+
+.services-content {
+    max-width: 1200px; /* Lebar maksimum konten */
+    margin: 0 auto; /* Memusatkan konten */
+    padding: 0 20px; /* Padding 0 atas-bawah, 20px kiri-kanan */
+}
+
+.service-card {
+    background-color: #ffffff; /* Warna latar belakang putih */
+    padding: 40px; /* Padding dalam kartu */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Bayangan halus */
+    margin-bottom: 30px; /* Jarak bawah antar kartu */
+}
+
+.service-card h2 {
+    color: #1e3a8a; /* Warna biru tua */
+    font-size: 2.2em; /* Ukuran font untuk judul layanan */
+    margin-bottom: 10px; /* Jarak bawah dari deskripsi */
+    padding-bottom: 15px; /* Padding bawah untuk garis */
+    border-bottom: 3px solid #ffd700; /* Garis bawah emas dari palet */
+}
+
+.service-card .service-description {
+    font-size: 1.1em; /* Ukuran font untuk deskripsi */
+    color: #666; /* Warna abu-abu sedang */
+    margin-bottom: 30px; /* Jarak ke konten di bawahnya */
+    font-style: italic; /* Teks miring */
+}
+
+.service-category {
+    display: flex; /* Mengatur tata letak flexbox */
+    gap: 40px; /* Jarak antara kolom */
+}
+
+.category-column {
+    flex: 1; /* Agar kedua kolom memiliki lebar yang sama */
+}
+
+.category-column h3 {
+    font-size: 1.5em; /* Ukuran font untuk subjudul kategori */
+    color: #333; /* Warna abu-abu gelap */
+    margin-bottom: 15px; /* Jarak bawah dari list */
+}
+
+.category-column ul {
+    list-style: none; /* Menghilangkan bullet points default */
+    padding-left: 0; /* Menghapus padding kiri default */
+}
+
+.category-column ul li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%231e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>') no-repeat left center; /* Ikon centang biru */
+    padding-left: 30px; /* Jarak untuk ikon centang */
+    margin-bottom: 12px; /* Jarak bawah antar item */
+    font-size: 1.1em; /* Ukuran font untuk item list */
+    color: #555; /* Warna abu-abu gelap */
+    line-height: 1.6; /* Tinggi baris untuk keterbacaan */
+}

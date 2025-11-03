@@ -1,0 +1,138 @@
+body, html {
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font stack modern */
+    background-color: #f4f7f6; /* Latar belakang abu-abu muda */
+    color: #333; /* Warna teks utama */
+}
+
+.sidebar {
+    width: 260px; /* Lebar sidebar tetap */
+    background-color: #1e3a8a; /* Warna biru tua dari frontend */
+    height: 100vh; /* Setinggi layar */
+    position: fixed; /* Tetap di kiri */
+    left: 0; /* Posisi kiri 0 */
+    top: 0; /* Posisi atas 0 */
+    color: white; /* Warna teks putih */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Bayangan di sebelah kanan */
+    overflow-y: auto; /* Bisa di-scroll jika konten panjang */
+}
+
+.sidebar-header {
+    padding: 20px; /* Padding dalam header */
+    text-align: center; /* Teks rata tengah */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Garis pembatas bawah */
+}
+
+.sidebar-header a {
+    color: #ffd700; /* Warna emas untuk logo */
+    font-size: 1.5em; /* Ukuran font besar */
+    font-weight: bold; /* Teks tebal */
+    text-decoration: none; /* Menghapus garis bawah */
+}
+
+.sidebar-nav {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0; /* Menghapus padding default */
+    margin: 20px 0; /* Margin atas-bawah 20px */
+}
+
+.sidebar-nav li a {
+    display: block; /* Membuat link menjadi block element */
+    color: rgba(255, 255, 255, 0.8); /* Warna teks putih transparan */
+    text-decoration: none; /* Menghapus garis bawah */
+    padding: 15px 25px; /* Padding dalam link */
+    transition: all 0.3s ease; /* Transisi halus untuk semua properti */
+}
+
+.sidebar-nav li a:hover {
+    background-color: #ffd700; /* Warna emas saat hover */
+    color: #1e3a8a; /* Warna biru tua saat hover */
+}
+
+.content {
+    margin-left: 260px; /* Memberi jarak agar tidak tertutup sidebar */
+    padding: 30px; /* Padding dalam area konten */
+}
+
+.content h1 {
+    font-size: 2em; /* Ukuran font untuk judul */
+    font-weight: 300; /* Ketebalan font ringan */
+    color: #1e3a8a; /* Warna biru tua */
+    border-bottom: 1px solid #ddd; /* Garis bawah abu-abu */
+    padding-bottom: 10px; /* Padding bawah untuk garis */
+    margin-top: 0; /* Menghapus margin atas default */
+}
+
+.admin-table {
+    width: 100%; /* Lebar tabel penuh */
+    border-collapse: collapse; /* Menghilangkan spasi antar border */
+    margin-top: 20px; /* Jarak atas dari elemen sebelumnya */
+    background: #ffffff; /* Latar belakang putih */
+    border-radius: 8px; /* Sudut melengkung */
+    overflow: hidden; /* Agar border-radius terlihat di tabel */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 15px; /* Padding dalam sel */
+    border-bottom: 1px solid #eee; /* Garis bawah abu-abu sangat muda */
+    text-align: left; /* Teks rata kiri */
+}
+
+.admin-table th {
+    background-color: #f9fafb; /* Header tabel sedikit abu-abu */
+    font-weight: 600; /* Teks semi-bold */
+    color: #555; /* Warna abu-abu gelap */
+    text-transform: uppercase; /* Teks kapital */
+    font-size: 0.85em; /* Ukuran font lebih kecil */
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f4f7f6; /* Efek hover di baris tabel */
+}
+
+/* Vertikal align top untuk sel rowspan */
+.valign-top {
+    vertical-align: top;
+    padding-top: 15px; /* Beri padding agar sejajar dengan baris pertama */
+}
+
+/* --- Style Tombol --- */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin: 2px;
+}
+
+.btn-primary {
+    background-color: #1e3a8a; /* Biru Tua */
+}
+.btn-primary:hover {
+    background-color: #1c3274;
+}
+
+.btn-blue {
+    background-color: #3b82f6; /* Biru Cerah */
+}
+.btn-blue:hover {
+    background-color: #2563eb;
+}
+
+.btn-red {
+    background-color: #ef4444; /* Merah */
+}
+.btn-red:hover {
+    background-color: #dc2626;
+}
+
