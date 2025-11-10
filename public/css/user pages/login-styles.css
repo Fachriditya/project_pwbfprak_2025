@@ -1,0 +1,89 @@
+body, html {
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font stack modern */
+    background-color: #f4f7f6; /* Latar belakang abu-abu muda */
+    color: #333; /* Warna teks utama */
+}
+
+.login-container {
+    display: flex; /* Mengatur tata letak flexbox */
+    justify-content: center; /* Rata tengah horizontal */
+    align-items: center; /* Rata tengah vertikal */
+    min-height: 100vh; /* Setinggi layar penuh */
+    background-color: #f4f7f6; /* Warna background abu-abu muda */
+}
+
+.login-box {
+    width: 100%; /* Lebar penuh container */
+    max-width: 360px; /* Lebar maksimal box login */
+    background: white; /* Latar belakang putih */
+    padding: 30px; /* Padding dalam box */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+.login-header {
+    text-align: center; /* Teks rata tengah */
+    color: #333; /* Warna teks abu-abu gelap */
+    font-size: 1.5em; /* Ukuran font besar */
+    margin-bottom: 25px; /* Jarak bawah dari form */
+    font-weight: 500; /* Ketebalan font medium */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Jarak bawah antar form group */
+}
+
+.form-group label {
+    display: block; /* Membuat label block element */
+    margin-bottom: 8px; /* Jarak bawah dari input */
+    color: #555; /* Warna abu-abu sedang */
+    font-weight: 500; /* Ketebalan font medium */
+}
+
+.form-input {
+    width: 100%; /* Lebar penuh container */
+    padding: 10px 12px; /* Padding dalam input */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+    box-sizing: border-box; /* Padding termasuk dalam perhitungan width */
+    font-size: 16px; /* Ukuran font normal */
+    transition: border-color 0.3s; /* Transisi halus untuk border */
+}
+
+.form-input:focus {
+    border-color: #1e3a8a; /* Warna border biru saat fokus */
+    outline: none; /* Menghapus outline default */
+}
+
+.btn-login {
+    width: 100%; /* Lebar penuh container */
+    padding: 12px; /* Padding dalam tombol */
+    border: none; /* Menghapus border default */
+    border-radius: 5px; /* Sudut melengkung */
+    background-color: #1e3a8a; /* Warna biru tua */
+    color: white; /* Warna teks putih */
+    font-size: 1.1em; /* Ukuran font sedikit besar */
+    font-weight: 600; /* Teks semi-bold */
+    cursor: pointer; /* Kursor pointer saat hover */
+    transition: background-color 0.3s; /* Transisi warna background */
+}
+
+.btn-login:hover {
+    background-color: #1c327a; /* Warna biru lebih gelap saat hover */
+}
+
+.alert-error {
+    background-color: #f8d7da; /* Latar belakang merah muda */
+    color: #721c24; /* Warna teks merah gelap */
+    border: 1px solid #f5c6cb; /* Border merah muda */
+    padding: 10px; /* Padding dalam alert */
+    margin-bottom: 15px; /* Jarak bawah dari elemen berikut */
+    border-radius: 5px; /* Sudut melengkung */
+    font-size: 0.9em; /* Ukuran font kecil */
+}
+
+.alert-error p {
+    margin: 0; /* Menghapus margin default paragraf */
+}

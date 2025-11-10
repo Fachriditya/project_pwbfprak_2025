@@ -1,105 +1,163 @@
 body, html {
-    margin: 0; /* Menghapus margin default */
-    padding: 0; /* Menghapus padding default */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font stack modern */
-    background-color: #f4f7f6; /* Latar belakang abu-abu muda */
-    color: #333; /* Warna teks utama */
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
 }
 
+/* =================================
+   Sidebar (Menu Kiri)
+   ================================= */
 .sidebar {
-    width: 260px; /* Lebar sidebar tetap */
-    background-color: #1e3a8a; /* Warna biru tua dari frontend */
-    height: 100vh; /* Setinggi layar */
-    position: fixed; /* Tetap di kiri */
-    left: 0; /* Posisi kiri 0 */
-    top: 0; /* Posisi atas 0 */
-    color: white; /* Warna teks putih */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Bayangan di sebelah kanan */
-    overflow-y: auto; /* Bisa di-scroll jika konten panjang */
+    width: 260px;
+    background-color: #1e3a8a;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Tumpukan vertikal dari atas ke bawah */
 }
 
 .sidebar-header {
-    padding: 20px; /* Padding dalam header */
-    text-align: center; /* Teks rata tengah */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Garis pembatas bawah */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar-header a {
-    color: #ffd700; /* Warna emas untuk logo */
-    font-size: 1.5em; /* Ukuran font besar */
-    font-weight: bold; /* Teks tebal */
-    text-decoration: none; /* Menghapus garis bawah */
+    color: #ffd700;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .sidebar-nav {
-    list-style: none; /* Menghilangkan bullet points */
-    padding: 0; /* Menghapus padding default */
-    margin: 20px 0; /* Margin atas-bawah 20px */
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex-grow: 1; /* Mengisi sisa ruang yang tersedia */
+    overflow-y: auto; /* Hanya area ini yang bisa di-scroll */
 }
 
 .sidebar-nav li a {
-    display: block; /* Membuat link menjadi block element */
-    color: rgba(255, 255, 255, 0.8); /* Warna teks putih transparan */
-    text-decoration: none; /* Menghapus garis bawah */
-    padding: 15px 25px; /* Padding dalam link */
-    transition: all 0.3s ease; /* Transisi halus untuk semua properti */
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
 }
 
 .sidebar-nav li a:hover {
-    background-color: #ffd700; /* Warna emas saat hover */
-    color: #1e3a8a; /* Warna biru tua saat hover */
+    background-color: #ffd700;
+    color: #1e3a8a;
 }
 
+/* =================================
+   Label Grup Menu Sidebar
+   ================================= */
+.sidebar-label {
+    padding: 10px 20px 10px 15px; /* Padding kiri lebih kecil dari menu item */
+    font-size: 1em; /* Ukuran font sama dengan menu item */
+    font-weight: 700; /* Teks tebal */
+    color: #ffd700; /* Warna emas konsisten dengan header */
+    text-transform: uppercase; /* Huruf kapital semua */
+    margin-top: 10px; /* Jarak dari grup menu sebelumnya */
+}
+
+/* =================================
+   Area Logout Sidebar
+   ================================= */
+.sidebar-logout-wrapper {
+    flex-shrink: 0; /* Mencegah area ini mengecil */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Garis pemisah atas */
+}
+
+.sidebar-logout-wrapper a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-logout-wrapper a:hover {
+    background-color: #ffd700;
+    color: #1e3a8a;
+}
+
+/* =================================
+   Konten Utama
+   ================================= */
 .content {
-    margin-left: 260px; /* Memberi jarak agar tidak tertutup sidebar */
-    padding: 30px; /* Padding dalam area konten */
+    margin-left: 260px; /* Sesuaikan dengan lebar sidebar */
+    padding: 30px;
 }
 
 .content h1 {
-    font-size: 2em; /* Ukuran font untuk judul */
-    font-weight: 300; /* Ketebalan font ringan */
-    color: #1e3a8a; /* Warna biru tua */
-    border-bottom: 1px solid #ddd; /* Garis bawah abu-abu */
-    padding-bottom: 10px; /* Padding bawah untuk garis */
-    margin-top: 0; /* Menghapus margin atas default */
+    font-size: 2em;
+    font-weight: 300;
+    color: #1e3a8a;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
-.admin-table {
-    width: 100%; /* Lebar tabel penuh */
-    border-collapse: collapse; /* Menghilangkan spasi antar border */
-    margin-top: 20px; /* Jarak atas dari elemen sebelumnya */
-    background: #ffffff; /* Latar belakang putih */
-    border-radius: 8px; /* Sudut melengkung */
-    overflow: hidden; /* Agar border-radius terlihat di tabel */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+/* =================================
+   Container Konten
+   ================================= */
+.content-box {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.admin-table th,
-.admin-table td {
-    padding: 15px; /* Padding dalam sel */
-    border-bottom: 1px solid #eee; /* Garis bawah abu-abu sangat muda */
-    text-align: left; /* Teks rata kiri */
+/* =================================
+   Styling Tabel Data
+   ================================= */
+.data-table {
+    width: 100%;
+    border-collapse: collapse; /* Garis border menyatu */
+    margin-top: 20px;
 }
 
-.admin-table th {
-    background-color: #f9fafb; /* Header tabel sedikit abu-abu */
-    font-weight: 600; /* Teks semi-bold */
-    color: #555; /* Warna abu-abu gelap */
-    text-transform: uppercase; /* Teks kapital */
-    font-size: 0.85em; /* Ukuran font lebih kecil */
+.data-table th,
+.data-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee; /* Garis pemisah bawah */
+    text-align: left;
 }
 
-.admin-table tbody tr:hover {
-    background-color: #f4f7f6; /* Efek hover di baris tabel */
+.data-table th {
+    background-color: #f9fafb; /* Background header tabel */
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase; /* Huruf kapital untuk header */
+    font-size: 0.85em;
 }
 
-/* Vertikal align top untuk sel rowspan */
+.data-table tbody tr:hover {
+    background-color: #f4f7f6; /* Efek hover pada baris */
+}
+
+/* =================================
+   Utility Classes
+   ================================= */
 .valign-top {
-    vertical-align: top;
-    padding-top: 15px; /* Beri padding agar sejajar dengan baris pertama */
+    vertical-align: top; /* Rata atas untuk konten sel */
 }
 
-/* --- Style Tombol --- */
+.mb-3 {
+    margin-bottom: 20px; /* Margin bawah 20px */
+}
+
 .btn {
     display: inline-block;
     padding: 8px 16px;
@@ -112,27 +170,82 @@ body, html {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-    margin: 2px;
 }
 
 .btn-primary {
-    background-color: #1e3a8a; /* Biru Tua */
+    background-color: #1e3a8a; /* Warna primary navy */
 }
+
 .btn-primary:hover {
-    background-color: #1c3274;
+    background-color: #1c327a; /* Warna hover yang lebih gelap */
 }
 
 .btn-blue {
-    background-color: #3b82f6; /* Biru Cerah */
+    background-color: #3b82f6; /* Warna biru */
 }
+
 .btn-blue:hover {
-    background-color: #2563eb;
+    background-color: #2563eb; /* Warna biru hover */
 }
 
 .btn-red {
-    background-color: #ef4444; /* Merah */
-}
-.btn-red:hover {
-    background-color: #dc2626;
+    background-color: #ef4444; /* Warna merah */
 }
 
+.btn-red:hover {
+    background-color: #dc2626; /* Warna merah hover */
+}
+
+.text-center {
+    text-align: center; /* Rata tengah teks */
+}
+
+/* =================================
+   Grid Statistik Dashboard
+   ================================= */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom dengan lebar sama */
+    gap: 20px; /* Jarak antar kartu */
+}
+
+.stat-card {
+    background-color: #f9fafb;
+    border: 1px solid #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s; /* Efek transisi halus */
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Efek angkat saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Bayangan saat hover */
+}
+
+.stat-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 600;
+}
+
+.stat-card p {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #192a56; /* Warna teks statistik */
+}
+
+/* =================================
+   Responsive Design
+   ================================= */
+@media (max-width: 768px) {
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+    .content {
+        margin-left: 0; /* Sidebar disembunyikan di mobile */
+    }
+}

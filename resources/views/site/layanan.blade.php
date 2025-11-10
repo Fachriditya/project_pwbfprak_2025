@@ -1,11 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.site')
+
 @section('title', 'Layanan Kami - RSHP UNAIR')
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/main pages/site/layanan.css') }}">
 @endpush
 
 @section('content')
-
 <div class="services-container">
     <header class="services-header">
         <h1>Layanan Unggulan Kami</h1>
@@ -13,7 +14,6 @@
     </header>
 
     <div class="services-content">
-
         <div class="service-card">
             <h2>Layanan Bedah</h2>
             <div class="service-category">
@@ -89,9 +89,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
 @endsection
-

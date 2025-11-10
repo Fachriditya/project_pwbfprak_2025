@@ -10,9 +10,7 @@ class RoleController extends Controller
 {
     public function index()
     {
-        $roles = Role::orderBy('nama_role', 'asc')->get();
-        return view('admin.role.index', [
-            'roles' => $roles
-        ]);
+        $users = \App\Models\User::with('roles')->orderBy('nama', 'asc')->get();
+        return view('admin.role.index', compact('users'));
     }
 }

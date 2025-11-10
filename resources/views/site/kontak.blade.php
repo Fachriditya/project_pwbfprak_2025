@@ -1,11 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.site')
+
 @section('title', 'Kontak Kami - RSHP UNAIR')
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/main pages/site/kontak.css') }}">
 @endpush
 
 @section('content')
-
 <div class="contact-container">
     <div class="contact-header">
         <h1>Hubungi Kami</h1>
@@ -13,7 +14,6 @@
     </div>
 
     <div class="contact-content">
-
         <div class="contact-left-column">
             <div class="contact-info-card">
                 <h3>Informasi Kontak</h3>
@@ -35,7 +35,7 @@
                 <h3>Lokasi Kami</h3>
                 <div class="map-container">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.876355448372!2d112.7830616152778!3d-7.25531817316531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f9995c211c7b%3A0x8b19131753177899!2sRumah%20Sakit%20Hewan%20Pendidikan%20Universitas%20Airlangga!5e0!3m2!1sen!2sid!4v1661234567890!5m2!1sen!2sid" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.913500057864!2d112.7820623153365!3d-7.250558994767226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f999956461c3%3A0x62c3e162c904832c!2sUniversitas%20Airlangga%20-%20Kampus%20C!5e0!3m2!1sen!2sid!4v1678888888888" 
                         width="100%" 
                         height="300" 
                         style="border:0;" 
@@ -51,6 +51,7 @@
             <div class="contact-form-card">
                 <h3>Kirim Pesan</h3>
                 <form action="#" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label for="name">Nama Lengkap</label>
                         <input type="text" id="name" name="name" required>
@@ -71,8 +72,6 @@
                 </form>
             </div>
         </div>
-
     </div>
 </div>
-
 @endsection

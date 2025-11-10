@@ -1,0 +1,200 @@
+body, html {
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font stack modern */
+    background-color: #f4f7f6; /* Latar belakang abu-abu muda */
+    color: #333; /* Warna teks utama */
+}
+
+/* Sidebar (Menu Kiri) */
+.sidebar {
+    width: 260px; /* Lebar sidebar tetap */
+    background-color: #1e3a8a; /* Warna biru tua */
+    height: 100vh; /* Setinggi layar */
+    position: fixed; /* Tetap di kiri */
+    left: 0; /* Posisi kiri 0 */
+    top: 0; /* Posisi atas 0 */
+    color: white; /* Warna teks putih */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Bayangan di sebelah kanan */
+    overflow-y: auto; /* Bisa di-scroll jika konten panjang */
+}
+
+.sidebar-header {
+    padding: 20px; /* Padding dalam header */
+    text-align: center; /* Teks rata tengah */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Garis pembatas bawah transparan */
+}
+
+.sidebar-header a {
+    color: #ffd700; /* Warna emas untuk logo */
+    font-size: 1.5em; /* Ukuran font besar */
+    font-weight: bold; /* Teks tebal */
+    text-decoration: none; /* Menghapus garis bawah */
+}
+
+.sidebar-nav {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0; /* Menghapus padding default */
+    margin: 20px 0; /* Margin atas-bawah 20px */
+}
+
+.sidebar-nav li a {
+    display: block; /* Membuat link menjadi block element */
+    color: rgba(255, 255, 255, 0.8); /* Warna teks putih transparan */
+    text-decoration: none; /* Menghapus garis bawah */
+    padding: 15px 25px; /* Padding dalam link */
+    transition: all 0.3s ease; /* Transisi halus untuk semua properti */
+}
+
+.sidebar-nav li a:hover {
+    background-color: #ffd700; /* Warna emas saat hover */
+    color: #1e3a8a; /* Warna biru tua saat hover */
+}
+
+/* Konten Utama */
+.content {
+    margin-left: 260px; /* Memberi jarak agar tidak tertutup sidebar */
+    padding: 30px; /* Padding dalam area konten */
+}
+
+.content h1 {
+    font-size: 2em; /* Ukuran font untuk judul */
+    font-weight: 300; /* Ketebalan font ringan */
+    color: #1e3a8a; /* Warna biru tua */
+    border-bottom: 1px solid #ddd; /* Garis bawah abu-abu */
+    padding-bottom: 10px; /* Padding bawah untuk garis */
+    margin-top: 0; /* Menghapus margin atas default */
+}
+
+/* LAYER BOX PUTIH */
+.content-box {
+    background: #ffffff; /* Latar belakang putih */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+    padding: 25px; /* Padding dalam box */
+    margin-bottom: 20px; /* Jarak bawah antar box */
+    width: 100%; /* Lebar penuh container */
+    box-sizing: border-box; /* Padding termasuk dalam perhitungan width */
+}
+
+/* STYLING TABEL */
+.data-table {
+    width: 100%; /* Lebar tabel penuh container */
+    border-collapse: collapse; /* Menghilangkan spasi antar border */
+    margin-top: 20px; /* Jarak atas dari elemen sebelumnya */
+}
+
+.data-table th,
+.data-table td {
+    padding: 15px; /* Padding dalam sel */
+    border-bottom: 1px solid #eee; /* Garis bawah abu-abu sangat muda */
+    text-align: left; /* Teks rata kiri */
+}
+
+.data-table th {
+    background-color: #f9fafb; /* Header tabel sedikit abu-abu */
+    font-weight: 600; /* Teks semi-bold */
+    color: #555; /* Warna abu-abu gelap */
+    text-transform: uppercase; /* Teks kapital */
+    font-size: 0.85em; /* Ukuran font lebih kecil */
+}
+
+.data-table tbody tr:hover {
+    background-color: #f4f7f6; /* Efek hover di baris tabel */
+}
+
+/* Utility & Tombol */
+.valign-top {
+    vertical-align: top; /* Perataan teks di atas sel */
+}
+
+.mb-3 {
+    margin-bottom: 20px; /* Jarak bawah 20px */
+}
+
+.btn {
+    display: inline-block; /* Menampilkan sebagai blok inline */
+    padding: 8px 16px; /* Padding dalam tombol */
+    border: none; /* Menghapus border default */
+    border-radius: 5px; /* Sudut melengkung */
+    color: white; /* Warna teks putih */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-size: 0.9em; /* Ukuran font kecil */
+    font-weight: 600; /* Teks semi-bold */
+    cursor: pointer; /* Kursor pointer saat hover */
+    transition: background-color 0.3s ease; /* Transisi warna background */
+    text-align: center; /* Teks rata tengah */
+}
+
+.btn-primary {
+    background-color: #1e3a8a; /* Biru tua */
+}
+
+.btn-primary:hover {
+    background-color: #1c327a; /* Biru tua lebih gelap saat hover */
+}
+
+.btn-blue {
+    background-color: #3b82f6; /* Biru cerah */
+}
+
+.btn-blue:hover {
+    background-color: #2563eb; /* Biru cerah lebih gelap saat hover */
+}
+
+.btn-red {
+    background-color: #ef4444; /* Merah */
+}
+
+.btn-red:hover {
+    background-color: #dc2626; /* Merah lebih gelap saat hover */
+}
+
+.text-center {
+    text-align: center; /* Perataan teks tengah */
+}
+
+/* Statistik Dashboard */
+.stat-grid {
+    display: grid; /* Mengatur tata letak menggunakan CSS Grid */
+    grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom dengan lebar sama */
+    gap: 20px; /* Jarak antar kotak statistik */
+}
+
+.stat-card {
+    background-color: #f9fafb; /* Latar belakang abu-abu sangat muda */
+    border: 1px solid #e9ecef; /* Garis border tipis */
+    padding: 20px; /* Padding dalam kartu */
+    border-radius: 8px; /* Sudut melengkung */
+    text-align: center; /* Teks rata tengah */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transisi halus untuk transform dan shadow */
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Efek sedikit terangkat saat di-hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Bayangan saat hover */
+}
+
+.stat-card h3 {
+    margin-top: 0; /* Menghapus margin atas default */
+    margin-bottom: 10px; /* Jarak bawah dari angka */
+    font-size: 16px; /* Ukuran judul kartu */
+    color: #555; /* Warna abu-abu gelap */
+    font-weight: 600; /* Teks semi-bold */
+}
+
+.stat-card p {
+    margin-bottom: 0; /* Menghapus margin bawah default */
+    font-size: 32px; /* Ukuran angka count yang besar */
+    font-weight: 700; /* Teks tebal */
+    color: #192a56; /* Warna biru RSHP */
+}
+
+@media (max-width: 768px) {
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr); /* Ubah jadi 2 kolom di layar kecil */
+    }
+    .content {
+        margin-left: 0; /* Hapus margin kiri di layar kecil */
+    }
+}
